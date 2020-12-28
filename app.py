@@ -15,7 +15,7 @@ class City(db.Model):
     name = db.Column(db.String(35), nullable=False)
 
 def getCityHelper(city):
-    url= f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&appid=dc16f1253d2f9642cf3c69b70a073368"
+    url= f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=imperial&appid={apiid}"
     r = requests.get(url).json()
     return r 
 
